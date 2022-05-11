@@ -4,13 +4,9 @@ void main() {
   runApp(const MyApp());
 }
 
-void test() {
-  final person = [1, 2, 3, 4, 5];
-  final newArr = [];
-
-  newArr.addAll(person);
-  newArr.retainWhere((element) => element < 3);
-  print(newArr);
+void test(List<String>? names) {
+  names?.add("Gee");
+  print(names);
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    test();
+    test(["nara", "sara", "nawchaa"]);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
